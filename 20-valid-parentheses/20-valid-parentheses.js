@@ -6,7 +6,6 @@
 
 const isValid = (s) => {
   // initialize empty stack 
-  if (s.length === 0) return false
   
   const stack = [];
   
@@ -22,12 +21,9 @@ const isValid = (s) => {
     } else if (s[i] === '{') {
       stack.push('}')
       
-    } else {
-      if (s[i] === stack[stack.length - 1]) {
-        stack.pop() 
-      } else {
+    } else if (s[i] !== stack.pop()) {
         return false
-      }
+    
     }
   }
 
