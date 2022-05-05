@@ -12,18 +12,38 @@
  */
 
 
-
-
-
 var hasCycle = function(head) {
-    const nodes = {}
+
+    if (!head) return false;
+    
+    let shorter = head;
+    let faster = head;
+    
+    while (faster.next && faster.next.next) {
+        shorter = shorter.next;
+        faster = faster.next.next;
+        if (shorter === faster) return true;
+    }
+    
+    return false;
+};
+
+
+
+
+
+
+
+
+
+
+var hasCycleOld = function(head) {
 
     if (!head) return false;
     
     let cur = head;
     
-    
-    
+
     while (cur && cur.next) {
         if (cur.visited === true) {
             return true;
