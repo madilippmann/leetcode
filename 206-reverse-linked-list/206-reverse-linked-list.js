@@ -29,18 +29,20 @@ while there are next nodes in list (next)
 
 var reverseList = function(head) {
 
+    if (!head) return null;
     let cur = head;
-    let prev = head;
+    let prev = null;
     let next = cur.next;
     
-    while (next) {
-        // cur.next = prev;
-        prev = cur;
-        cur = cur.next;
+    while (cur) {
         next = cur.next;
+        cur.next = prev;
+        prev = cur;
+        cur = next;
+
     }
     
-    
+    return prev
 }
 
 
@@ -72,7 +74,7 @@ var reverseList = function(head) {
 
 
 
-var reverseList = function(head) {
+var reverseList2 = function(head) {
     let cur = head;
     let prev = null;
     let next;
