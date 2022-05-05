@@ -34,7 +34,8 @@ var reverseList = function(head) {
     let next = cur.next;
     
     while (next) {
-        cur.next = prev;
+        // cur.next = prev;
+        prev = cur;
         cur = cur.next;
         next = cur.next;
     }
