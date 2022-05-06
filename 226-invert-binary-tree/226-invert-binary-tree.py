@@ -6,6 +6,28 @@
 #         self.right = right
 class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        '''
+                4
+            2       7
+          1   3   6   9
+        
+        
+                4
+            2       7
+          1   3   6   9
+          
+          pointerLeft = 2
+          
+          reassign root.left = root.right
+          reassign root.right = pointerLeft
+          
+          Recurse
+          invertTree(root.left)
+          invertTree(root.right)
+          
+          return root
+
+        '''
 
         # base case
         if not root: return 
