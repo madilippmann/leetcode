@@ -13,6 +13,7 @@ class MinStack:
         
         if not popped in self.stack:
             newMin = float('inf')
+            
             for val in self.stack:
                 if val < newMin:
                     newMin = val
