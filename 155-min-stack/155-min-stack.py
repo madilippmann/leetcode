@@ -11,7 +11,7 @@ class MinStack:
     def pop(self) -> None:
         popped = self.stack.pop()
         
-        if not popped in self.stack:
+        if not self.min in self.stack:
             newMin = float('inf')
             
             for val in self.stack:
