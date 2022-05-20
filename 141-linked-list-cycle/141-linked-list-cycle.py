@@ -31,20 +31,29 @@ class Solution:
         time complexity = O(n)
         '''
         
+#         if not head: return False
+        
+#         slow = head
+#         fast = head.next
+        
+#         while fast:
+#             if slow == fast:
+#                 return True
+            
+#             slow = slow.next
+#             fast = fast.next
+#             if fast: fast = fast.next
+#             else: break
+            
+#         return False
+        
         if not head: return False
         
         slow = head
-        fast = head.next
-        
-        while fast:
-            if slow == fast:
-                return True
-            
+        fast = head
+
+        while fast.next and fast.next.next:
             slow = slow.next
-            fast = fast.next
-            if fast: fast = fast.next
-            else: break
-            
+            fast = fast.next.next
+            if slow == fast: return True
         return False
-        
-        
