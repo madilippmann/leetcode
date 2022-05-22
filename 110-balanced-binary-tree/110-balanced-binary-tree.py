@@ -15,9 +15,7 @@ class Solution:
         
         leftDepth = self.maxDepth(root.left)
         rightDepth = self.maxDepth(root.right)
-        
-        # print(leftDepth, rightDepth, 0 <= abs(leftDepth - rightDepth) <= 1)
-        
+                
         return 0 <= abs(leftDepth - rightDepth) <= 1
 
     
@@ -48,3 +46,17 @@ class Solution:
         if left >= right: return left
         else: return right
         
+        
+        
+'''
+def isBalanced(self, root):
+    dfs(root):
+        if not root: return [True, 0]
+        left, right = dfs(root.left), dfs(root.right)
+
+        balanced = left[0] and right[0] and abs(left[1] - right[1]) <= 1
+
+        return [balanced, 1 + max(left[1], right[1])]
+    
+self.dfs(root)[0]
+'''
