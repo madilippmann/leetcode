@@ -6,6 +6,44 @@
 #         self.right = right
 class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        
+        if not p and not q: return True
+        elif not p or not q : return False
+        elif p.val != q.val: return False
+
+        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         '''
         check if a root exists for both p and q 
             - if both p and q don't have a root 
@@ -53,25 +91,16 @@ class Solution:
         isSameTree(p.right, q.right) 3
         
         '''
-        print(not p, not q)
-        if not p and not q: return True
-        elif not p or not q: return False
+#         if not p and not q: return True
+#         elif not p or not q: return False
         
-        if p.val != q.val: return False
-        
-#         print(p.left)
-#         if p.left and q.left:
-#             if p.left.val != q.left.val: return False
-        
-#         if p.right and q.right:
-#             if p.right.val != q.right.val: return False
+#         if p.val != q.val: return False
         
         
-        left = self.isSameTree(p.left, q.left)
-        right = self.isSameTree(p.right, q.right)
+#         left = self.isSameTree(p.left, q.left)
+#         right = self.isSameTree(p.right, q.right)
         
-        print('LEFT: ', left, ' RIGHT: ', right)
-        if not right or not left: return False
-        else: return True
+#         if not right or not left: return False
+#         else: return True
         
         
