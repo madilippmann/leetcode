@@ -5,6 +5,9 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+    
+    
+    
     def maxDepth(self, root: Optional[TreeNode], depth=1) -> int:
         '''
         base case: if not root: return None
@@ -14,20 +17,61 @@ class Solution:
         
         '''
         
-        # base case
+        
         if not root: return 0
-        
-        # recursive case
-        if  root.left:
-            left = self.maxDepth(root.left, depth + 1)
-        else: left = depth
-            
-        if root.right: 
+
+        right = left = depth
+
+        if root.left:
+            left = self.maxDepth(root.left, depth + 1) 
+        if root.right:
             right = self.maxDepth(root.right, depth + 1)
-        else: right = depth
+
+        return max(left, right)
+
         
-        if left >= right: return left
-        else: return right
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+#         # base case
+#         if not root: return 0
+        
+#         # recursive case
+#         if  root.left:
+#             left = self.maxDepth(root.left, depth + 1)
+#         else: left = depth
+            
+#         if root.right: 
+#             right = self.maxDepth(root.right, depth + 1)
+#         else: right = depth
+        
+#         if left >= right: return left
+#         else: return right
         
         
          
