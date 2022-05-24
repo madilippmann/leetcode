@@ -19,18 +19,13 @@ class Solution:
             
             leftDepth = memo.get(root.left, 0)
             rightDepth = memo.get(root.right, 0)
-            print(leftDepth, rightDepth)
             
             return max(max(maxDiameter, leftDepth + rightDepth), _diameterOfBinaryTree(root.left), _diameterOfBinaryTree(root.right))
             
             
             
-            
-            
-            
         heightOfBinaryTree(root)
         return _diameterOfBinaryTree(root)
-        return maxDiameter
 
         
         
