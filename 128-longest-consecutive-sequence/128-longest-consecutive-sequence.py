@@ -11,20 +11,20 @@ class Solution:
         
         for num in unique:
             if num - 1 not in unique:
-                sequenceStarts.append(num)
-                
-        for num in sequenceStarts:
-            length = 1
-            cur = num 
-            validSequence = True
+                length = 1
+                cur = num 
             
-            while validSequence:
-                if cur + 1 in unique:
-                    length += 1
-                    cur += 1
-                    longest = max(length, longest)
-                else:
-                    validSequence = False
+                while cur + 1 in unique:
+
+                        length += 1
+                        cur += 1
+                        longest = max(length, longest)
+
+#                 sequenceStarts.append(num)
+                
+#         for num in sequenceStarts:
+
+
 
         return longest
 
