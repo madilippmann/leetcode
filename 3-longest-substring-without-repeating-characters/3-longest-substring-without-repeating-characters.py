@@ -13,7 +13,7 @@ class Solution:
             if s[cur] not in substring:
                 substring.add(s[cur])
                 cur += 1
-                if len(substring) > longest: longest = len(substring)
+                longest = max(longest, len(substring))
             else:
                 start += 1
                 cur = start + 1
