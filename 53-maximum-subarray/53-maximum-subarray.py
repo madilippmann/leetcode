@@ -1,5 +1,40 @@
 class Solution:
+    # Working but not most optimized solution using dynamic programming
     def maxSubArray(self, nums: List[int]) -> int:
+        maxSubarray = [0] * len(nums)
+        
+        for i, num in enumerate(nums):
+            maxSubarray[i] = max(maxSubarray[i-1] + num, num)
+            
+        return max(maxSubarray)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        '''  
+        
+        
         # create empty list to store max values
         dp = [0] * len(nums)
         
@@ -15,7 +50,7 @@ class Solution:
     
     
     
-    
+        '''
     
     
     
