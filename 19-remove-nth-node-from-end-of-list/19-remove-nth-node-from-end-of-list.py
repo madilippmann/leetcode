@@ -37,18 +37,14 @@ class Solution:
         cur = head
         
         if n == 1: # removing tail
-            print('entered 1')
             while cur and cur.next and cur.next.next:
                 cur = cur.next
             cur.next = None
                     
         elif nth_node == 0: # removing head
             head = head.next
-            print('entered 2')
             
-        else: # removing inner node
-            print('entered 3')
-            
+        else: # removing inner node            
             while i < nth_node - 1:
                 cur = cur.next
                 i += 1
