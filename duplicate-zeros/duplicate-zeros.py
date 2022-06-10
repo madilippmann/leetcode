@@ -10,8 +10,7 @@ class Solution:
             if arr[i] != 0:
                 res.append(arr[i])
             else:
-                res.append(0)
-                res.append(0)
+                res += [0,0]
             i += 1
         
         for i in range(len(arr)):
