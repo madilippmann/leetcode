@@ -4,7 +4,6 @@ class Solution:
         
         while l < r:
             mid = (r + l) // 2
-            print(mid, nums[l], nums[r])
             
             if nums[l] <= nums[r]:
                 return nums[l]
