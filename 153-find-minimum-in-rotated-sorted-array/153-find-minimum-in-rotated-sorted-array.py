@@ -15,15 +15,6 @@ class Solution:
             else:
                 l = mid
             
-            # if r - l == 1:
-            #     print('entered 0')
-            #     return min(nums[l], nums[r])
-            # elif nums[l] < nums[r]:
-            #     print('entered 1')
-            #     r = mid 
-            # elif nums[l] > nums[r]:
-            #     print('entered 2')
-            #     l = mid
         
         return nums[l]
             
