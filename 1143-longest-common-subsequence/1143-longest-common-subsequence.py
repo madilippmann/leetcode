@@ -3,8 +3,6 @@ class Solution:
 
         dp = [[0 for c in range(len(text2) + 1)] for r in range(len(text1) + 1)]
         
-        
-        
         for r in range(1, len(dp)):
             for c in range(1, len(dp[0])):
                 if text1[r-1] == text2[c-1]:
@@ -12,6 +10,4 @@ class Solution:
                 else:
                     dp[r][c] = max(dp[r-1][c], dp[r][c-1])
 
-        for row in dp:
-            print(row)
         return dp[-1][-1]
