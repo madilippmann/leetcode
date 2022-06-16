@@ -1,8 +1,9 @@
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         global_longest = s[0]
-        for i in range(len(s)):
-            local_longest = ""
+        
+        for i in range(len(s)):   
+            
             # check odd length
             l, r = i-1, i+1
             while l >=0 and r < len(s) and s[l] == s[r]:
