@@ -27,6 +27,5 @@ class Solution:
             if node.right:
                 queue.appendleft((node.right, level+1))
 
-        print(res)
         res.pop()
         return res
