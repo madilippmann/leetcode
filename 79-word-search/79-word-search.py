@@ -35,29 +35,3 @@ class Solution:
         return False
                     
        
-
-#     def search_from_cell(self, board, word, start_row, start_col, i):
-#         dirs = [        (-1, 0),
-#                 ( 0,-1),        ( 0, 1),
-#                         ( 1, 0)
-#                ]
-        
-#         visited = set(tuple([start_row, start_col]))
-#         stack = [(start_row, start_col, 0)]
-        
-#         while stack:
-#             r, c, i = stack.pop()
-            
-#             if i == len(word) - 1:
-#                 return True
-
-#             for dR, dC in dirs:
-#                 if (0 <= r+dR < len(board) and 
-#                     0 <= c+dC < len(board[0]) and 
-#                     (r+dR, c+dC) not in visited and
-#                     i < len(word) and
-#                     board[r+dR][c+dC] == word[i]):
-                    
-#                     stack.append((r+dR, c+dC, i+1))
-        
-#         return False
