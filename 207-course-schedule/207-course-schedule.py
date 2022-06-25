@@ -6,9 +6,7 @@ class Solution:
         
         for course, prereq in prerequisites:
             adj_list[course].append(prereq)
-        
-        # print(adj_list)
-        
+                
         
         for course in adj_list.keys():
             stack = []  
@@ -26,7 +24,6 @@ class Solution:
                     return False
                 visited.add(cur)
                 
-                # visited.add(cur)
                 if cur in adj_list:
                     for prereq in adj_list[cur]:
                         stack.append((prereq, start))
