@@ -1,5 +1,22 @@
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
+        def get_box_key(row, col):
+            if row < 3:
+                box_row = 0
+            elif 3 <= row <= 5:
+                box_row = 1
+            elif row > 5:
+                box_row = 2
+                
+            if col < 3:
+                box_col = 0
+            elif 3 <= col <= 5:
+                box_col = 1
+            elif col > 5:
+                box_col = 2
+                    
+            return f"{box_row}-{box_col}"
+        
         rows, cols = {i:set() for i in range(9)}, {i:set() for i in range(9)}
         
         sub_boxes = dict()
@@ -14,21 +31,7 @@ class Solution:
                 
                 if num == '.': continue
                 
-                if row < 3:
-                    box_row = 0
-                elif 3 <= row <= 5:
-                    box_row = 1
-                elif row > 5:
-                    box_row = 2
-                
-                if col < 3:
-                    box_col = 0
-                elif 3 <= col <= 5:
-                    box_col = 1
-                elif col > 5:
-                    box_col = 2
-                    
-                box = f"{box_row}-{box_col}"
+                box = get_box_key(row, col)
                 
                 if num in rows[row] or num in cols[col] or num in sub_boxes[box]:
                     return False
@@ -38,4 +41,7 @@ class Solution:
                 sub_boxes[box].add(num)
         
         return True
+    
+    
+        
                 
