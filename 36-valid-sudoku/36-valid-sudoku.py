@@ -31,11 +31,6 @@ class Solution:
                 box = f"{box_row}-{box_col}"
                 
                 if num in rows[row] or num in cols[col] or num in sub_boxes[box]:
-                    print(num)
-                    print(rows[row])
-                    print(cols[col])
-                    print(sub_boxes[box])
-                    
                     return False
                 
                 rows[row].add(num)                
