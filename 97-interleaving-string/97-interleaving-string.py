@@ -12,7 +12,6 @@ class Solution:
             if s3_i >= len(s3):
                 return
 
-
             if s2_i < len(s2) and s2[s2_i] == s3[s3_i]:
                 if not dp[r+1][c]:
                     dp[r+1][c] = True
@@ -24,8 +23,6 @@ class Solution:
 
         
         dfs(0,0,0,0,0)
-        # for row in dp:
-        #     print(row)
         return dp[-1][-1] == True
         
                 
