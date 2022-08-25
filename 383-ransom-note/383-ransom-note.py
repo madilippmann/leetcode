@@ -7,7 +7,6 @@ class Solution:
         for c in magazine:
             magazineDict[c] = magazineDict.get(c, 0) + 1
         
-        # print(magazineDict)
         for c in ransomNote:
             if not c in magazineDict or magazineDict[c] == 0:
                 return False
